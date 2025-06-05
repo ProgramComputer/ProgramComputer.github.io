@@ -15,6 +15,7 @@ export default defineConfig({
           metaTitle: CONFIG.seo.title,
           metaDescription: CONFIG.seo.description,
           metaImageURL: CONFIG.seo.imageURL,
+          favicon: `https://github.com/${CONFIG.github.username}.png`,
         },
       },
     }),
@@ -30,6 +31,8 @@ export default defineConfig({
               name: 'Portfolio',
               short_name: 'Portfolio',
               description: 'Personal Portfolio',
+              theme_color: CONFIG.themeConfig.customTheme.primary,
+              background_color: CONFIG.themeConfig.customTheme['base-100'],
               icons: [
                 {
                   src: 'logo.png',
