@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paul</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  :root {
+    --text: #1a1a1a;
+    --dim: #6b6b6b;
+    --bg: #f8f7f5;
+    --line: #e0dedd;
+  }
+
+  html { font-size: 16px; -webkit-font-smoothing: antialiased; }
+
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    padding: 80px 0 120px;
+  }
+
+  .container {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 0 28px;
+  }
+
+  /* ─── HEADER ─── */
+  h1 {
+    font-size: 1.75rem;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    margin-bottom: 20px;
+  }
+
+  .links {
+    display: flex;
+    gap: 20px;
+    font-size: 0.82rem;
+    margin-bottom: 64px;
+  }
+
+  .links a {
+    color: var(--dim);
+    text-decoration: none;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 1px;
+    transition: color 0.2s, border-color 0.2s;
+  }
+
+  .links a:hover {
+    color: var(--text);
+    border-color: var(--text);
+  }
+
+  /* ─── SECTIONS ─── */
+  .section { margin-bottom: 56px; }
+
+  .section-title {
+    font-size: 0.72rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--dim);
+    margin-bottom: 18px;
+  }
+
+  /* ─── PROJECT ROW ─── */
+  .project {
+    padding: 14px 0;
+    border-top: 1px solid var(--line);
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 16px;
+  }
+
+  .project:last-child { border-bottom: 1px solid var(--line); }
+
+  .project-left { flex: 1; min-width: 0; }
+
+  .project-name {
+    font-size: 0.92rem;
+    font-weight: 500;
+    color: var(--text);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .project-name:hover { color: #555; }
+
+  .project-desc {
+    font-size: 0.8rem;
+    color: var(--dim);
+    font-weight: 300;
+    margin-top: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .project-right {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-shrink: 0;
+  }
+
+  .project-stars {
+    font-size: 0.78rem;
+    color: var(--dim);
+    font-weight: 300;
+    white-space: nowrap;
+  }
+
+  .project-lang {
+    font-size: 0.72rem;
+    color: var(--dim);
+    font-weight: 400;
+    white-space: nowrap;
+  }
+
+  /* ─── LOADING ─── */
+  .loading {
+    font-size: 0.8rem;
+    color: var(--dim);
+    font-weight: 300;
+    font-style: italic;
+  }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 480px) {
+    body { padding: 56px 0 100px; }
+    .project { flex-direction: column; gap: 4px; }
+    .project-left { width: 100%; }
+    .project-right { justify-content: flex-start; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <h1>Paul</h1>
+  <div class="links">
+    <a href="https://github.com/ProgramComputer" target="_blank">github</a>
+    <a href="https://x.com/pauosis" target="_blank">twitter</a>
+    <a href="mailto:programcomputer@icloud.com">email</a>
+  </div>
+
+  <!-- Featured -->
+  <div class="section">
+    <p class="section-title">Featured</p>
+    <blockquote class="twitter-tweet" data-media-max-width="560"><p lang="en" dir="ltr">Say goodbye to embedding chaos!<br><br>EmbeddingBridge brings Git-like control to your <a href="https://twitter.com/OpenAI?ref_src=twsrc%5Etfw">@OpenAI</a> &amp; <a href="https://twitter.com/VoyageAI?ref_src=twsrc%5Etfw">@VoyageAI</a> embeddings.<br><br>Try it below. <a href="https://t.co/Jv7zEAFCDN">pic.twitter.com/Jv7zEAFCDN</a></p>&mdash; Paul (@pauosis) <a href="https://twitter.com/pauosis/status/1905103693222928727?ref_src=twsrc%5Etfw">March 27, 2025</a></blockquote>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  </div>
+
+  <!-- Projects -->
+  <div class="section">
+    <p class="section-title">Projects</p>
+    <div id="projects">
+      <!-- Manual projects -->
+      <div class="project">
+        <div class="project-left">
+          <a href="https://mars.paulius.trade" target="_blank" class="project-name">Mars Interloper</a>
+          <p class="project-desc">3D browser game set on Mars</p>
+        </div>
+      </div>
+      <div class="project">
+        <div class="project-left">
+          <a href="https://ephphatha.paulius.trade" target="_blank" class="project-name">Ephphatha</a>
+          <p class="project-desc">Bible alarm app</p>
+        </div>
+      </div>
+      <!-- GitHub repos will be appended here -->
+    </div>
+  </div>
+
+</div>
+
+<script>
+async function fetchProjects() {
+  const el = document.getElementById('projects');
+  try {
+    const res = await fetch('https://api.github.com/users/ProgramComputer/repos?per_page=100&type=owner');
+    if (!res.ok) throw new Error();
+    const allRepos = await res.json();
+    
+    // Filter, sort by stars descending, and take top 5
+    const repos = allRepos
+      .filter(r => r.name !== 'ProgramComputer.github.io')
+      .sort((a, b) => b.stargazers_count - a.stargazers_count)
+      .slice(0, 5);
+
+    // Append GitHub repos after manual projects
+    el.innerHTML += repos.map(r => `
+      <div class="project">
+        <div class="project-left">
+          <a href="${r.html_url}" target="_blank" class="project-name">${r.name}</a>
+          ${r.description ? `<p class="project-desc">${r.description}</p>` : ''}
+        </div>
+        <div class="project-right">
+          ${r.language ? `<span class="project-lang">${r.language}</span>` : ''}
+          <span class="project-stars">★ ${r.stargazers_count}</span>
+        </div>
+      </div>
+    `).join('');
+  } catch {
+    // Silently fail - manual projects will still show
+  }
+}
+
+fetchProjects();
+</script>
+</body>
+</html>
